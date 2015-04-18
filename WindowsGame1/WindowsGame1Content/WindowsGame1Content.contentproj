@@ -42,7 +42,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-      <Name>code</Name>
+    <Compile Include="GameTileBG_01%402x.png">
+      <Name>GameTileBG_01</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

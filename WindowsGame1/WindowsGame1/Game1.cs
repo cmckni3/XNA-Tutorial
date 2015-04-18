@@ -18,7 +18,7 @@ namespace WindowsGame1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Sprite mSprite, mSprite2;
+        Sprite mSprite;
 
         public Game1()
         {
@@ -34,9 +34,7 @@ namespace WindowsGame1
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
             mSprite = new Sprite();
-            mSprite2 = new Sprite();
 
             base.Initialize();
         }
@@ -50,11 +48,8 @@ namespace WindowsGame1
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
-            mSprite.LoadContent(this.Content, "code");
-            mSprite.Position = new Vector2(125, 200);
-            mSprite2.LoadContent(this.Content, "code");
-            mSprite2.Position = new Vector2(500, 200);
+            mSprite.LoadContent(this.Content, "GameTileBG_01");
+            mSprite.Position = new Vector2(0, 0);
         }
 
         /// <summary>
@@ -89,10 +84,8 @@ namespace WindowsGame1
         protected override void Draw(GameTime gameTime)
         {
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
-            // TODO: Add your drawing code here
             spriteBatch.Begin();
             mSprite.Draw(this.spriteBatch);
-            mSprite2.Draw(this.spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }
